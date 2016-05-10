@@ -1,27 +1,38 @@
-# Laravel PHP Framework
+#Project 4 - Much To-do (Final project)
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+##Description
+Much To-Do is a time-managment application that helps users organize their tasks into an easily-managed to-do list.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Much To-Do was created for the Harvard Extension School course, Dynamic Web Applications (CSCI E-15).
 
-## Official Documentation
+###Project goal:
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
++ The goal of this project is to get hands-on practice with working with the basics of Laravel.
 
-## Contributing
+###Task
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+This project is open-ended. Whatever you create, the main expectation is that the project meets the following criteria:
 
-## Security Vulnerabilities
++ Uses PHP/Laravel.
++ Uses a database with at least **2 tables**. This count does not include a users table, but does include pivot tables.
++ Demonstrates **all 4 CRUD interactions** (user signup/login does not count towards this).
++ Demonstrates basic server-side error validation.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+###Plugins/libraries/packages/outside code
++ [Laravel 5.2](http://laravel.com)
++ Foundation 6, by [Zurb](http://foundation.zurb.com)
++ jQuery (used by Foundation)
++ [Google fonts](http://google.com/fonts) (Bitter, Open Sans)
 
-## License
+###Help
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
++ [Laravel 5.2 Docs](https://laravel.com/docs/5.2)
++ [Code Smart, by Dayle Rees](http://daylerees.com/codesmart)
+
+###Live URL:
+[http://p4.ebo.one](http://p4.ebo.one)
+
+
+###Project demo
+[Coming Soon](https://youtube.com)
