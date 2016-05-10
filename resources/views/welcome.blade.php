@@ -4,14 +4,30 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Much 2-Do | E Boone | Project 4 | CSCI E-15</title>
+    <title>Much To-Do | E Boone | Project 4 | CSCI E-15</title>
+    <link href='https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body class="welcome">
+    <!-- <ul class="menu">
+      <li><a href="#">Log In</a></li>
+      <li><a href="#">Register</a></li>
+    </ul> -->
 <div class="row">
-    <div class="large-12 columns">
-        <h1>Welcome to Much 2-Do!</h1>
+    <header class="medium-6 columns">
+        <img src="img/clock.gif" alt="clock logo">
+        <h1>Welcome to Much To-Do</h1>
+        <h4>The To-do app for super-busy people</h4>
+    </header>
+</div>
+
+<div class="row">
+    <div class="medium-6 columns">
+        <p>Much To-Do is a time-managment application that helps you organize your tasks into an easily managed to-do list.
+            <br><br>
+            <a href="/login">Log in</a> or <a href="register">register</a> to get started.
+        </p>
     </div>
 </div>
 

@@ -1,0 +1,43 @@
+.welcome {
+  background: url(../img/clock-bkgrnd.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media only screen and (max-width: 640px) {
+  .welcome {
+    background: #DBCABA;
+  }
+}
+.welcome header {
+  margin-top: 1.5rem;
+  color: #434343;
+  text-align: center;
+}
+.welcome header h1 {
+  font-family: "Bitter", serif;
+}
+.welcome header h4 {
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  top: -0.6rem;
+}
+.welcome p {
+  font-family: "Open Sans", sans-serif;
+  color: #434343;
+  text-align: center;
+}
+.welcome a {
+  color: #fe2633;
+}
+.welcome a:hover {
+  text-decoration: underline;
+}
+
+.menu {
+  background-color: #fff;
+}
+.menu a {
+  color: #fe2633;
+}
