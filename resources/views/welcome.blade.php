@@ -18,7 +18,7 @@
     <header class="medium-6 columns">
         <img src="img/clock.gif" alt="clock logo">
         <h1>Welcome to <span>Much To-Do</span></h1>
-        <h4>The To-do app for super-busy people</h4>
+        <h4>The to-do app for super-busy people</h4>
     </header>
 </div>
 
