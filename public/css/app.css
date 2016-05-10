@@ -18,8 +18,12 @@
 .welcome header h1 {
   font-family: "Bitter", serif;
 }
+.welcome header h1 span {
+  color: #fe2633;
+}
 .welcome header h4 {
   font-family: "Open Sans", sans-serif;
+  font-style: italic;
   position: relative;
   top: -0.6rem;
 }
@@ -27,6 +31,7 @@
   font-family: "Open Sans", sans-serif;
   color: #434343;
   text-align: center;
+  padding-top: 1rem;
 }
 .welcome a {
   color: #fe2633;
