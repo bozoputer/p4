@@ -1,19 +1,24 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Much To-Do | E Boone | Project 4 | CSCI E-15</title>
-    <link href='https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/app.css">
-</head>
-<body class="welcome">
-    <!-- <ul class="menu">
-      <li><a href="#">Log In</a></li>
-      <li><a href="#">Register</a></li>
-    </ul> -->
+@extends('layouts.master')
+
+@section('head')
+<style>
+    body {
+        background: url(../img/clock-bkgrnd.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    @media only screen and (max-width: 640px) {
+    body {
+            background: #DBCABA;
+        }
+    }
+</style>
+@stop
+
+@section('content')
 <div class="row">
     <header class="medium-6 columns">
         <img src="img/clock.gif" alt="clock logo">
@@ -30,10 +35,4 @@
         </p>
     </div>
 </div>
-
-<script src="js/vendor/jquery.js"></script>
-<script src="js/vendor/what-input.js"></script>
-<script src="js/vendor/foundation.js"></script>
-<script src="js/app.js"></script>
-</body>
-</html>
+@stop
