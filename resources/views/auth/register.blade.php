@@ -20,6 +20,9 @@
 <form>
     <div class="row">
         <div class="medium-6 columns">
+            <label>Name
+                <input type="text" placeholder="Enter your name">
+            </label>
             <label>Email
                 <input type="text" placeholder="Enter your email">
             </label>
