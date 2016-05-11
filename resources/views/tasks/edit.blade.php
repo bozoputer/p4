@@ -2,6 +2,6 @@
 
 @section('content')
 
-all tasks
+edit a task
 
 @stop

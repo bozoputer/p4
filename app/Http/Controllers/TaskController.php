@@ -26,6 +26,26 @@ class TaskController extends Controller {
     */
     public function postCreate(Request $request) {
 
-        return redirect('/books');
+        return redirect('/tasks');
+    }
+
+    /**
+    * Responds to requests to GET /task/edit/{id?}
+    */
+    public function getEdit($id) {
+
+        return view('tasks.edit');
+
+    }
+
+
+    /**
+    * Responds to requests to POST /task/edit/{id?}
+    */
+    public function postEdit(Request $request) {
+
+        \Session::flash('message','Your changes were saved.');
+        return redirect('/task/edit/'.$request->id);
+
     }
 }

@@ -6,7 +6,10 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
 
-    #Shows all tasks - complete and incomplete
     Route::get('/tasks', 'TaskController@getIndex');
+
+    Route::get('/tasks/create', 'TaskController@getCreate');
+
+    Route::get('/task/edit/{id?}', 'TaskController@getEdit');
 
 });
