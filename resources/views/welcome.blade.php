@@ -24,7 +24,7 @@
 
 <div class="row">
     <div class="medium-6 columns">
-        <p>Much To-Do is a time-managment application that helps you organize your tasks into an easily-managed to-do list.
+        <p>Much To-Do is a task manager application that helps you organize your tasks into an easily-managed to-do list.
             <br><br>
             <a href="/login">Log in</a> or <a href="register">register</a> to get started.
         </p>
