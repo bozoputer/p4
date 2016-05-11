@@ -31,6 +31,17 @@ a:hover {
   color: #fff;
 }
 
+label,
+.help-text {
+  color: #434343;
+  font-family: "Bitter", serif;
+}
+
+.help-text {
+  text-align: left;
+  margin-top: -1rem;
+}
+
 .menu {
   background-color: #fff;
 }
