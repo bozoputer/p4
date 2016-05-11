@@ -11,7 +11,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/shared.css">
 
     {{-- Yield any page specific CSS files or anything else you might want in the head --}}
     @yield('head')

@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
 @section('head')
+
+    <link rel="stylesheet" href="css/welcome.css">
+
     @include('layouts.background')
 @stop
 

@@ -17,7 +17,7 @@ header h4 {
 }
 
 p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bitter", serif;
   color: #434343;
   text-align: center;
   padding-top: 1rem;
@@ -34,17 +34,10 @@ a:hover {
 label,
 .help-text {
   color: #434343;
-  font-family: "Bitter", serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .help-text {
   text-align: left;
   margin-top: -1rem;
-}
-
-.menu {
-  background-color: #fff;
-}
-.menu a {
-  color: #fe2633;
 }

@@ -1,7 +1,10 @@
 @extends('layouts.master')
 
 @section('head')
-    @include('layouts.background')
+<link rel="stylesheet" href="css/welcome.css">
+
+@include('layouts.background')
+
 @stop
 
 @section('content')
