@@ -15,14 +15,14 @@ class TaskController extends Controller {
     }
 
     /**
-    * Responds to requests to GET /tasks/create
+    * Responds to requests to GET /task/create
     */
     public function getCreate() {
         return view('tasks.create');
     }
 
     /**
-    * Responds to requests to POST /tasks/create
+    * Responds to requests to POST /task/create
     */
     public function postCreate(Request $request) {
 
