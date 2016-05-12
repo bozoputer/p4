@@ -23,6 +23,12 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
+    # Where the user will go if their login fails
+    protected $loginPath = '/login';
+
+    # Where the user will go after logging out
+    protected $redirectAfterLogout = '/';
+
     /**
      * Where to redirect users after login / registration.
      *
