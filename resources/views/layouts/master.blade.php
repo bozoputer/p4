@@ -10,8 +10,8 @@
     </title>
 
     <link href='https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="/css/foundation.min.css">
+    <link rel="stylesheet" href="/css/shared.css">
 
     {{-- Yield any page specific CSS files or anything else you might want in the head --}}
     @yield('head')
@@ -19,12 +19,20 @@
 </head>
 <body>
 @if(Auth::check())
-<nav>
-    <ul class="menu">
-      <li><a href="#">Test</a></li>
-      <li><a href="#">Test</a></li>
-    </ul>
-</nav>
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Much To-do</li>
+            <li><a href="/tasks">Tasks</a></li>
+            <li><a href="/task/create">New</a></li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><a href="/logout">Log out</a></li>
+        </ul>
+    </div>
+</div>
 @endif
 
 <main>
@@ -33,9 +41,9 @@
 </main>
 
 
-<script src="js/vendor/jquery.js"></script>
-<script src="js/vendor/what-input.js"></script>
-<script src="js/vendor/foundation.js"></script>
-<script src="js/app.js"></script>
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/vendor/what-input.js"></script>
+<script src="/js/vendor/foundation.js"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>
