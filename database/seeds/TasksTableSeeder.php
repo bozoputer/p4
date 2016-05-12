@@ -13,7 +13,7 @@ class TasksTableSeeder extends Seeder
     {
         DB::table('tasks')->insert([
             'task' => 'Make a task',
-            'list_id' => 3,
+            'list_id' => 1,
             'note' => 'This is my first task',
             'complete' => 0,
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),

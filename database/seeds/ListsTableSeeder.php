@@ -24,12 +24,5 @@ class ListsTableSeeder extends Seeder
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
         ]);
-
-        DB::table('lists')->insert([
-            'list_name' => 'Third list',
-            'user_id' => 3,
-            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-        ]);
     }
 }

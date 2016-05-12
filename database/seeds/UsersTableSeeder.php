@@ -11,28 +11,18 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => 'Jill',
-            'email' => 'jill@harvard.edu',
-            'password' => 'helloworld',
-            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-        ]);
+        $user = \projectFour\User::firstOrCreate(['email' => 'jill@harvard.edu']);
+        $user->id = 1;
+        $user->name = 'Jill';
+        $user->email = 'jill@harvard.edu';
+        $user->password = \Hash::make('helloworld');
+        $user->save();
 
-        DB::table('users')->insert([
-            'name' => 'Jamal',
-            'email' => 'jamal@harvard.edu',
-            'password' => 'helloworld',
-            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-        ]);
-
-        DB::table('users')->insert([
-            'name' => 'Michael Jackson',
-            'email' => 'mj@gmail.com',
-            'password' => bcrypt('secret'),
-            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-        ]);
+        $user = \projectFour\User::firstOrCreate(['email' => 'jamal@harvard.edu']);
+        $user->id = 2;
+        $user->name = 'Jamal';
+        $user->email = 'jamal@harvard.edu';
+        $user->password = \Hash::make('helloworld');
+        $user->save();
     }
 }
