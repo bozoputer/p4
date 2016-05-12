@@ -17,26 +17,27 @@
     </div>
 </div>
 
-<form>
+<form method="POST" action="/register">
+    {!! csrf_field() !!}
     <div class="row">
         <div class="medium-6 columns">
-            <label>Name
-                <input type="text" placeholder="Enter your name">
+            <label for="name">Name
+                <input type="text" name="name" value="{{ old ('name')}}" placeholder="Enter your name">
             </label>
-            <label>Email
-                <input type="text" placeholder="Enter your email">
+            <label for="email">Email
+                <input type="text" name="email" value="{{ old('email')}}" placeholder="Enter your email">
             </label>
-            <label>Password<sup>*</sup>
-                <input type="password" aria-describedby="passwordHelpText" placeholder="Password">
+            <label for="password">Password<sup>*</sup>
+                <input type="password" name="password" aria-describedby="passwordHelpText" placeholder="Password">
             </label>
 
-            <label>Confirm password
-                <input type="password" aria-describedby="passwordHelpText">
+            <label for="password_confirmation">Confirm password
+                <input type="password" name="password_confirmation" aria-describedby="passwordHelpText">
             </label>
 
             <p class="help-text" id="passwordHelpText"><sup>*</sup>Password length must be at least 8 characters.</p>
 
-            <button type="submit" class="button">Submit</button>
+            <button type="submit" class="button">Register</button>
         </div>
     </div>
 </form>

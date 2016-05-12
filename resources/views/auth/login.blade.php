@@ -16,14 +16,19 @@
     </div>
 </div>
 
-<form>
+<form method="POST" action="/login">
+    {!! csrf_field() !!}
     <div class="row">
         <div class="medium-6 columns">
-            <label>Email
-                <input type="text" placeholder="Enter your email">
+            <label for="email">Email
+                <input type="text" name="email" value="{{ old('email')}}" placeholder="Enter your email">
             </label>
-            <label>Password
-                <input type="password" aria-describedby="passwordHelpText" placeholder="Password">
+            <label for="password">Password
+                <input type="password" name="password" aria-describedby="passwordHelpText" placeholder="Password">
+            </label>
+
+            <label for="remember">Remember Me
+                <input type="checkbox" name="remember">
             </label>
 
             <button type="submit" class="button">Submit</button>
