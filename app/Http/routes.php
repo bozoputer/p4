@@ -25,6 +25,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/task/create', 'TaskController@getCreate');
 
+    Route::post('/task/create','TaskController@postCreate');
+
     Route::get('/task/edit/{id?}', 'TaskController@getEdit');
 
 });
