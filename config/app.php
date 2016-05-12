@@ -156,6 +156,7 @@ return [
         projectFour\Providers\EventServiceProvider::class,
         projectFour\Providers\RouteServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        'projectFour\Providers\ComposerServiceProvider',
 
     ],
 

@@ -29,7 +29,7 @@
     </div>
     <div class="top-bar-right">
         <ul class="menu">
-            <li><a href="/logout">Log out</a></li>
+            <li><a href="/logout">Log out, {{ $user->name }}.</a></li>
         </ul>
     </div>
 </div>
