@@ -23,8 +23,8 @@
     <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
             <li class="menu-text">Much To-do</li>
-            <li><a href="/tasks">Tasks</a></li>
-            <li><a href="/task/create">New</a></li>
+            <li><a href="/tasks">View Tasks</a></li>
+            <li><a href="/task/create">Add Task</a></li>
         </ul>
     </div>
     <div class="top-bar-right">

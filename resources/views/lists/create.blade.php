@@ -5,15 +5,18 @@
 @stop
 
 @section('content')
+
 <div class="row">
     <div class="small-10 small-centered medium-8 columns">
-        <p>Add a new task to: "List Name"</p>
+        <p>Looks like you don't have a list yet!<br>
+            Create one by typing a name in the field below.
+        </p>
 
-        <form method="POST" action="/task/create">
+        <form method="POST" action="/list/create">
             {!! csrf_field() !!}
 
-            <label for="task">
-                <input type="text" name="task" placeholder="What needs to be done?">
+            <label for="list_name">
+                <input type="text" name="list_name" placeholder="List Name">
             </label>
 
             <button type="submit" class="button">Submit</button>
@@ -21,4 +24,5 @@
 
     </div>
 </div>
+
 @stop
