@@ -3,6 +3,7 @@
 namespace projectFour\Http\Controllers;
 
 use projectFour\Http\Controllers\Controller;
+use projectFour\ListController;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller {
@@ -11,7 +12,18 @@ class TaskController extends Controller {
     * Responds to requests to GET /tasks
     */
     public function getIndex() {
-        return view('tasks.tasks');
+
+        #$tasks = Task::all();
+
+        $id = \Auth::user()->id;
+
+        $allTasks = \DB::table('tasks')
+            ->where('list_id', $id)
+            ->get();
+
+
+#dd($allTasks);
+        return view('tasks.tasks')->with('tasks', $allTasks);
     }
 
     /**
@@ -19,8 +31,10 @@ class TaskController extends Controller {
     */
     public function getCreate() {
 
+        # Check to see if user has a list
         $list_status = \Auth::user()->list_status;
 
+        # If user has list create task; if not create list
         if ($list_status == 1) {
 
             return view('tasks.create');
@@ -37,11 +51,12 @@ class TaskController extends Controller {
     public function postCreate(Request $request) {
 
         $this->validate($request,[
-            'task' => 'required|max:255',
+            'task' => 'required|max:50',
         ]);
 
         # Mass Assignment
         $data = $request->only('task');
+        $data['list_id'] = \Auth::user()->id;
 
         #Add the data
         $task = new \projectFour\Task($data);
