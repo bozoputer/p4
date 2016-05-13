@@ -35,4 +35,4 @@ This project is open-ended. Whatever you create, the main expectation is that th
 
 
 ###Project demo
-[Coming Soon](https://youtube.com)
+[https://youtu.be/8goH9Ondja0](https://youtu.be/8goH9Ondja0)
