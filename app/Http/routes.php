@@ -19,14 +19,16 @@ Route::get('/logout', 'Auth\AuthController@logout');
 # ------------------------------------
 # Tasks
 # ------------------------------------
-Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/tasks', 'TaskController@getIndex');
 
-    Route::get('/task/create', 'TaskController@getCreate');
+Route::get('/tasks', 'TaskController@getIndex');
 
-    Route::post('/task/create','TaskController@postCreate');
+Route::get('/task/create', 'TaskController@getCreate');
 
-    Route::get('/task/edit/{id?}', 'TaskController@getEdit');
+Route::post('/task/create','TaskController@postCreate');
 
-});
+Route::get('/task/edit/{id?}', 'TaskController@getEdit');
+
+Route::get('/list/create', 'ListController@getCreate');
+
+Route::post('/list/create', 'ListController@postCreate');
