@@ -27,7 +27,9 @@ Route::get('/task/create', 'TaskController@getCreate');
 
 Route::post('/task/create','TaskController@postCreate');
 
-Route::get('/task/edit/{id?}', 'TaskController@getEdit');
+Route::get('/task/edit/{id}', 'TaskController@getEdit');
+
+Route::post('/tasks/edit/{id}', 'TaskController@postEdit');
 
 Route::get('/list/create', 'ListController@getCreate');
 
