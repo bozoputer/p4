@@ -31,6 +31,10 @@ Route::get('/task/edit/{id}', 'TaskController@getEdit');
 
 Route::post('/tasks/edit/{id}', 'TaskController@postEdit');
 
+Route::get('/task/complete/{id}', 'TaskController@getComplete');
+
+Route::post('/task/complete/{id}', 'TaskController@postComplete');
+
 Route::get('/list/create', 'ListController@getCreate');
 
 Route::post('/list/create', 'ListController@postCreate');

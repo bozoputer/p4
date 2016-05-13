@@ -17,9 +17,18 @@ class TaskController extends Controller {
 
         $allTasks = \DB::table('tasks')
             ->where('list_id', $id)
+            ->where('complete', 0)
             ->get();
 
-        return view('tasks.tasks')->with('tasks', $allTasks);
+
+        $complete = \DB::table('tasks')
+            ->where('list_id', $id)
+            ->where('complete', 1)
+            ->get();
+
+        return view('tasks.tasks')
+            ->with('tasks', $allTasks)
+            ->with('complete', $complete);
     }
 
     /**
@@ -67,7 +76,7 @@ class TaskController extends Controller {
     public function getEdit($id) {
 
         $task =  \projectFour\Task::findOrFail($id);
-        
+
         return view('tasks.edit')->with('task', $task);
 
     }
@@ -87,6 +96,29 @@ class TaskController extends Controller {
         $oldTask->save();
 
         return redirect('/tasks');
+
+    }
+
+    /**
+    * Responds to requests to GET /task/complete/{id?}
+    */
+    public function getComplete(Request $request, $id) {
+
+        $id = $request->id;
+
+        $oldTask = \projectFour\Task::find($id);
+
+        $oldTask->complete = 1;
+
+        $oldTask->save();
+
+        //$status =  \projectFour\Task::find($id);
+
+        return redirect('/tasks');
+
+
+
+        #return view('tasks.edit')->with('task', $task);
 
     }
 }

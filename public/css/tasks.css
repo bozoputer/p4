@@ -43,3 +43,15 @@ p {
   font-size: 1.2rem;
   font-family: "Bitter", serif;
 }
+
+img {
+  width: 25px;
+  height: 25px;
+}
+img.markComplete {
+  cursor: pointer;
+}
+
+.strike {
+  text-decoration: line-through;
+}
