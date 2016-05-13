@@ -17,7 +17,7 @@ class CreateTasksTable extends Migration
          $table->increments('id');
 
          $table->integer('list_id')->unsigned();
-         $table->foreign('list_id')->references('id')->on('lists');
+         $table->foreign('list_id')->references('id')->on('tasklists');
          $table->string('task');
          $table->string('note');
          $table->boolean('complete')->default(0);
