@@ -7,7 +7,7 @@
 @section('content')
 <div class="row">
     <div class="small-10 small-centered medium-8 columns">
-        <p>Add a new task to: "List Name"</p>
+        <p>Add a new task to your list.</p>
 
         <form method="POST" action="/task/create">
             {!! csrf_field() !!}

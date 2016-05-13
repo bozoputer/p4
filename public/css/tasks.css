@@ -55,3 +55,40 @@ img.markComplete {
 .strike {
   text-decoration: line-through;
 }
+
+td {
+  text-align: center;
+}
+td a {
+  color: #434343;
+}
+
+td,
+th {
+  color: #434343;
+}
+
+.small {
+  font-size: smaller;
+  color: #fe2633;
+}
+
+.allDone {
+  color: #fe2633;
+}
+
+.open,
+.complete {
+  font-size: 1.5rem;
+  padding: 1rem 0 0.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.open {
+  color: #fe2633;
+}
+
+.complete {
+  color: #5fcf80;
+  margin-top: 3rem;
+}
