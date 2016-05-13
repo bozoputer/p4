@@ -18,13 +18,34 @@ class TaskController extends Controller {
     * Responds to requests to GET /task/create
     */
     public function getCreate() {
-        return view('tasks.create');
+
+        $list_status = \Auth::user()->list_status;
+
+        if ($list_status == 1) {
+
+            return view('tasks.create');
+
+        } else {
+
+            return redirect('/list/create');
+        }
     }
 
     /**
     * Responds to requests to POST /task/create
     */
     public function postCreate(Request $request) {
+
+        $this->validate($request,[
+            'task' => 'required|max:255',
+        ]);
+
+        # Mass Assignment
+        $data = $request->only('task');
+
+        #Add the data
+        $task = new \projectFour\Task($data);
+        $task->save();
 
         return redirect('/tasks');
     }
