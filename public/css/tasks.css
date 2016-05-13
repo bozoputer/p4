@@ -1,8 +1,10 @@
 .top-bar {
   background-color: #434343;
 }
-.top-bar.ul {
-  background-color: #434343;
+@media only screen and (min-width: 20px) {
+  .top-bar ul {
+    background-color: #434343;
+  }
 }
 .top-bar .menu-text {
   background-color: #434343;
@@ -13,4 +15,31 @@
   background-color: #434343;
   color: #fff;
   font-family: "Open Sans", sans-serif;
+}
+
+input {
+  background: transparent;
+  border-top: transparent !important;
+  border-left: transparent !important;
+  border-right: transparent !important;
+  border-bottom: 4px solid #434343 !important;
+  font-weight: 200;
+  color: white;
+  padding-left: 0;
+  box-shadow: none !important;
+}
+
+[type="text"] {
+  height: 6rem;
+  padding: .5rem;
+  margin: 2rem 0 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.5rem;
+}
+
+p {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1.2rem;
+  font-family: "Bitter", serif;
 }
