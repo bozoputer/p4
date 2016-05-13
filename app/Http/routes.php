@@ -20,22 +20,26 @@ Route::get('/logout', 'Auth\AuthController@logout');
 # Tasks
 # ------------------------------------
 
-Route::get('/list/create', 'ListController@getCreate');
+Route::group(['middleware' => 'auth'], function () {
 
-Route::post('/list/create', 'ListController@postCreate');
+    Route::get('/list/create', 'ListController@getCreate');
 
-Route::get('/tasks', 'TaskController@getIndex');
+    Route::post('/list/create', 'ListController@postCreate');
 
-Route::get('/task/create', 'TaskController@getCreate');
+    Route::get('/tasks', 'TaskController@getIndex');
 
-Route::post('/task/create','TaskController@postCreate');
+    Route::get('/task/create', 'TaskController@getCreate');
 
-Route::get('/task/edit/{id}', 'TaskController@getEdit');
+    Route::post('/task/create','TaskController@postCreate');
 
-Route::post('/tasks/edit/{id}', 'TaskController@postEdit');
+    Route::get('/task/edit/{id}', 'TaskController@getEdit');
 
-Route::get('/task/complete/{id}', 'TaskController@getComplete');
+    Route::post('/tasks/edit/{id}', 'TaskController@postEdit');
 
-Route::post('/task/complete/{id}', 'TaskController@postComplete');
+    Route::get('/task/complete/{id}', 'TaskController@getComplete');
 
-Route::get('/task/delete/{id}', 'TaskController@getDelete');
+    Route::post('/task/complete/{id}', 'TaskController@postComplete');
+
+    Route::get('/task/delete/{id}', 'TaskController@getDelete');
+
+});
