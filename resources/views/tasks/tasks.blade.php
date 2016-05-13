@@ -6,5 +6,10 @@
 
 @section('content')
 
-test
+
+@foreach($tasks as $task)
+
+<p class="task">{!! $task->task !!}</p>
+@endforeach
+
 @stop

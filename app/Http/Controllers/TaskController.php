@@ -13,16 +13,12 @@ class TaskController extends Controller {
     */
     public function getIndex() {
 
-        #$tasks = Task::all();
-
         $id = \Auth::user()->id;
 
         $allTasks = \DB::table('tasks')
             ->where('list_id', $id)
             ->get();
 
-
-#dd($allTasks);
         return view('tasks.tasks')->with('tasks', $allTasks);
     }
 
