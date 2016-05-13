@@ -9,7 +9,7 @@
 
 @foreach($tasks as $task)
 
-<p class="task">{!! $task->task !!}</p>
+<a href="/task/edit/{!! $task->id !!}" class="task">{!! $task->task !!}</a><br>
 @endforeach
 
 @stop
