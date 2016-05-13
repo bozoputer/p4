@@ -66,7 +66,10 @@ class TaskController extends Controller {
     */
     public function getEdit($id) {
 
-        return view('tasks.edit');
+        $task =  \projectFour\Task::findOrFail($id);
+
+        #dd($task);
+        return view('tasks.edit')->with('task', $task);
 
     }
 
@@ -76,8 +79,15 @@ class TaskController extends Controller {
     */
     public function postEdit(Request $request) {
 
-        \Session::flash('message','Your changes were saved.');
-        return redirect('/task/edit/'.$request->id);
+        $id = $request->id;
+
+        $oldTask = \projectFour\Task::find($id);
+
+        $oldTask->task = $request->task;
+
+        $oldTask->save();
+
+        return redirect('/tasks');
 
     }
 }
