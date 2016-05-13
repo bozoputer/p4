@@ -6,6 +6,10 @@
 
 @section('content')
 
+@if (count($errors) > 0)
+    @include('layouts.errors')
+@endif
+
 <div class="row">
     <div class="small-10 small-centered medium-8 columns">
         <p>Looks like you don't have a list yet!<br>
