@@ -67,8 +67,7 @@ class TaskController extends Controller {
     public function getEdit($id) {
 
         $task =  \projectFour\Task::findOrFail($id);
-
-        #dd($task);
+        
         return view('tasks.edit')->with('task', $task);
 
     }
