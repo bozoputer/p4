@@ -25,7 +25,7 @@
                     <a href="/task/edit/{!! $task->id !!}">{!! $task->task !!}</a>
                 </td>
                 <td><a href="/task/complete/{!! $task->id !!}"><img src="img/complete.png" alt="Mark complete" title="Mark task complete"></td>
-                <td><a href="#"><img src="img/delete.png" alt="Delete" title="Delete task"></a></td>
+                <td><a href="/task/delete/{!! $task->id !!}"><img src="img/delete.png" alt="Delete" title="Delete task"></a></td>
             </tr>
             @endforeach
         </table>

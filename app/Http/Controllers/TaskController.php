@@ -112,13 +112,22 @@ class TaskController extends Controller {
 
         $oldTask->save();
 
-        //$status =  \projectFour\Task::find($id);
-
         return redirect('/tasks');
 
+    }
 
+    /**
+	* Responds to requests to GET /task/delete/{id?}
+	*/
+    public function getDelete($id) {
 
-        #return view('tasks.edit')->with('task', $task);
+        # Get the task to be deleted
+        $task = \projectFour\Task::find($id);
+
+        # Then delete the task
+        $task->delete();
+
+        return redirect('/tasks');
 
     }
 }

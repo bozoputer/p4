@@ -20,6 +20,9 @@ Route::get('/logout', 'Auth\AuthController@logout');
 # Tasks
 # ------------------------------------
 
+Route::get('/list/create', 'ListController@getCreate');
+
+Route::post('/list/create', 'ListController@postCreate');
 
 Route::get('/tasks', 'TaskController@getIndex');
 
@@ -35,6 +38,4 @@ Route::get('/task/complete/{id}', 'TaskController@getComplete');
 
 Route::post('/task/complete/{id}', 'TaskController@postComplete');
 
-Route::get('/list/create', 'ListController@getCreate');
-
-Route::post('/list/create', 'ListController@postCreate');
+Route::get('/task/delete/{id}', 'TaskController@getDelete');
