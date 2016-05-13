@@ -10,16 +10,17 @@
 
 @include('layouts.header')
 
+@if (count($errors) > 0)
+    @include('layouts.errors')
+@endif
+
 <div class="row">
     <div class="medium-6 columns">
         <p>Sign in with your email and password or <a href=/register>register</a> to create a new account.</p>
-    </div>
-</div>
 
-<form method="POST" action="/login">
-    {!! csrf_field() !!}
-    <div class="row">
-        <div class="medium-6 columns">
+        <form method="POST" action="/login">
+            {!! csrf_field() !!}
+
             <label for="email">Email
                 <input type="text" name="email" value="{{ old('email')}}" placeholder="Enter your email">
             </label>
@@ -32,7 +33,7 @@
             </label>
 
             <button type="submit" class="button">Submit</button>
-        </div>
+        </form>
     </div>
-</form>
+</div>
 @stop

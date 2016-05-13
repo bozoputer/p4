@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="/css/tasks.css">
 @stop
 
+@if (count($errors) > 0)
+    @include('layouts.errors')
+@endif
+
 @section('content')
 <div class="row">
     <div class="small-10 small-centered medium-8 columns">

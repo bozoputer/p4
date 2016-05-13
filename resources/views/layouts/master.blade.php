@@ -45,5 +45,14 @@
 <script src="/js/vendor/what-input.js"></script>
 <script src="/js/vendor/foundation.js"></script>
 <script src="/js/app.js"></script>
+
+<script>
+$(document).ready(function() {
+    setTimeout(function() {
+        $('.errors').fadeOut('fast');
+    }, 3000);
+});
+</script>
+
 </body>
 </html>

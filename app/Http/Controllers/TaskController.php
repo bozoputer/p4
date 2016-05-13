@@ -56,7 +56,7 @@ class TaskController extends Controller {
     public function postCreate(Request $request) {
 
         $this->validate($request,[
-            'task' => 'required|max:50',
+            'task' => 'required|max:100',
         ]);
 
         # Mass Assignment
@@ -86,6 +86,12 @@ class TaskController extends Controller {
     * Responds to requests to POST /task/edit/{id?}
     */
     public function postEdit(Request $request) {
+
+        # Validate the input
+        $this->validate($request,[
+            'task' => 'required|max:100',
+        ]);
+
 
         $id = $request->id;
 
