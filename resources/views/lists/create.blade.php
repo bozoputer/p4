@@ -20,7 +20,7 @@
             {!! csrf_field() !!}
 
             <label for="list_name">
-                <input type="text" name="list_name" placeholder="List Name">
+                <input type="text" name="list_name" id="list_name" placeholder="List Name">
             </label>
 
             <button type="submit" class="button">Submit</button>

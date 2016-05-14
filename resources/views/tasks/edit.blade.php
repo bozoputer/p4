@@ -17,7 +17,7 @@
             {!! csrf_field() !!}
 
             <label for="task">
-                <input type="text" name="task" value="{!! $task->task !!}">
+                <input type="text" name="task" id="task" value="{!! $task->task !!}">
             </label>
 
             <button type="submit" class="button">Submit</button>

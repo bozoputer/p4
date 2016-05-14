@@ -17,7 +17,7 @@
             {!! csrf_field() !!}
 
             <label for="task">
-                <input type="text" name="task" placeholder="What needs to be done?">
+                <input type="text" name="task" id="task" placeholder="What needs to be done?">
             </label>
 
             <button type="submit" class="button">Submit</button>
