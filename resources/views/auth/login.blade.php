@@ -22,14 +22,14 @@
             {!! csrf_field() !!}
 
             <label for="email">Email
-                <input type="text" name="email" value="{{ old('email')}}" placeholder="Enter your email">
+                <input type="text" name="email" id="email" value="{{ old('email')}}" placeholder="Enter your email">
             </label>
             <label for="password">Password
-                <input type="password" name="password" aria-describedby="passwordHelpText" placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password">
             </label>
 
             <label for="remember">Remember Me
-                <input type="checkbox" name="remember">
+                <input type="checkbox" name="remember" id="remember">
             </label>
 
             <button type="submit" class="button">Submit</button>
